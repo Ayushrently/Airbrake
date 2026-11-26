@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily Airbrake report: 10:00, at login, and after resume if missed
+
+[Timer]
+OnCalendar=*-*-* 10:00
+Persistent=true
+OnStartupSec=2min
+
+[Install]
+WantedBy=timers.target

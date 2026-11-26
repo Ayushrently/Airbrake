@@ -1,0 +1,7 @@
+.env
+*.env
+!.env.example
+reports/
+reviewed.json
+reviewed.json.tmp
+__pycache__/

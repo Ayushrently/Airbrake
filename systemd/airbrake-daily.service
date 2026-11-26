@@ -1,0 +1,7 @@
+[Unit]
+Description=Daily Airbrake report (once per day)
+
+[Service]
+Type=oneshot
+# Change the path if you cloned somewhere else.
+ExecStart=%h/airbrake-monitor/daily.sh
