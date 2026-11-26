@@ -55,6 +55,25 @@ python3 check.py --date 2026-10-27   # run as if it were that day
 The first run (no earlier report) checks yesterday, or Fri–Sun on a Monday. Output goes to
 `reports/<date>.html`, `.md` and `.json`; the Markdown is also printed.
 
+### Shortcut alias (optional)
+
+Add aliases to your shell config so you can run it from anywhere. Use `~/.bashrc` instead of `~/.zshrc`
+if you use bash, and change the path if you cloned somewhere other than `~/airbrake-monitor`:
+
+```bash
+echo "alias airbrake='python3 ~/airbrake-monitor/check.py'" >> ~/.zshrc
+echo "alias airbrake-serve='python3 ~/airbrake-monitor/check.py --serve'" >> ~/.zshrc
+source ~/.zshrc
+```
+
+Then:
+
+```bash
+airbrake                # today's report
+airbrake --days 3       # any check.py flag works
+airbrake-serve          # review in the browser
+```
+
 ### Review in the browser
 
 ```bash
